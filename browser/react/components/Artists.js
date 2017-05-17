@@ -13,7 +13,7 @@ const Artists = (props)=>{
                     return (
                     <div className="list-group-item" key={artist.id}>
                         {/* determine where to actually Link to later! */}
-                        <Link to="/artists">{ artist.name }</Link>   
+                        <Link href="#" to={`/artists/${artist.id}`}>{ artist.name }</Link>   
                     </div>
                     )    
                 })
