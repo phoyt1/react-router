@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Link} from 'react';
 
 const Albums = (props) => {
 
@@ -12,6 +12,7 @@ const Albums = (props) => {
       {
         albums.map(album => (
           <div className="col-xs-4" key={ album.id }>
+          <Link to={`/albums/${album.id}`}>{album.name}</Link>
             <a className="thumbnail" href="#" onClick={() => selectAlbum(album.id)}>
               <img src={ album.imageUrl } />
               <div className="caption">

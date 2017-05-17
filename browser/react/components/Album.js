@@ -10,6 +10,7 @@ export default class Album extends React.Component{
       isPlaying: false,
       toggleOne: undefined
     }
+    console.log(props)
   }
 
 componentDidMount(){
@@ -22,6 +23,7 @@ componentDidMount(){
 
   //console.log(props);
   render(){
+    var { album } = this.props
     return (
       <div className="album">
         <div>
@@ -30,9 +32,9 @@ componentDidMount(){
         </div>
         <Songs
           songs={album.songs}
-          currentSong={currentSong}
-          isPlaying={isPlaying}
-          toggleOne={toggleOne} />
+          currentSong={this.props.currentSong}
+          isPlaying={this.props.isPlaying}
+          toggleOne={this.props.toggleOne} />
       </div>
     );
   }
